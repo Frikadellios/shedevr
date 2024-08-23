@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+
+
+  --font-family-display: 'Ubuntu, Arial, "libra sans", sans-serif';
+  --breakpoint-3xl: 1920px;
+
+  --foreground-rgb: oklch(98.3% 0.004 316.6);
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --color-primary-my: oklch(89.33% 0.17190800551761173 165.35314232524098);
+  --color-background-my: oklch(18.67% 0 0);
+  --color-secondary-my: oklch(73.46% 0.185 152.73);
+
+  --color-background-card: oklch(14.08% 0.004 285.82);
+  --color-neon-yellow: oklch(94.44% 0.194 106.75);
+  --color-neon-pink: oklch(71.7% 0.25 360);
+  --color-neon-lime: oklch(91.5% 0.258 129);
+  --color-neon-cyan: oklch(91.3% 0.139 195.8);
+  --color-emerald-green: oklch(69.59% 0.149 162.48);
+  --color--overlay-blurple: oklch(91.3% 0.139 195.8);
+  --overlay-plurple: oklch(0.5 0.233 303.9 / 0.33);
+  --overlay-blurple: oklch(71.7% 0.25 360 / 10%);
+  --color-green: oklch(0.5 0.207 156.57);
+  --color-black: oklch(0% 0 0);
+  --color-white: oklch(100% 0 0);
+  --color-chiter: oklch(23.57% 0.008 274.61);
+  /* Shadcn - purple-black */
+  --color-background: oklch(10.69% 0.019 318.2);
+  --color-background-brown: oklch(14.67% 0.004 49.31);
+  --color-foreground: oklch(98.3% 0.004 316.6);
+  --color-muted: oklch(18.81% 0.012 316.42);
+  --color-muted-foreground: oklch(70.25% 0.012 316.56);
+
+  --color-popover: oklch(10.69% 0.019 318.2);
+  --color-popover-foreground: oklch(98.3% 0.004 316.6);
+  --color-card: oklch(12.24% 0.022 318.06);
+  --color-card-foreground: oklch(99.15% 0.002 316.6);
+  --color-primary: oklch(35.6% 0.174 312.18);
+  --color-primary-foreground: oklch(84.29% 0.111 316.21);
+  --color-secondary: oklch(22.83% 0.024 316.3);
+  --color-secondary-foreground: oklch(76.42% 0.041 316.45);
+  --color-accent: oklch(27.45% 0.044 316.1);
+  --color-accent-foreground: oklch(80.22% 0.047 316.44);
+  --color-destructive: oklch(59.18% 0.227 29.7);
+  --color-destructive-foreground: oklch(100% 0 0);
+  --color-primary-foreground: oklch(84.23% 0.111 316.28);
+  --muted-foreground: oklch(71.19% 0.013 286.07);
+
+  --color-border: oklch(35.6% 0.174 312.18 / 77%);
+
+  --color-input: oklch(27.84% 0.03 256.85);
+  --color-ring: oklch(35.6% 0.174 312.18);
+  --color-chart-1: oklch(52.92% 0.193 262.13);
+  --color-chart-2: oklch(69.83% 0.134 165.46);
+  --color-chart-3: oklch(72.32% 0.15 60.63);
+  --color-chart-4: oklch(61.92% 0.204 312.73);
+  --color-chart-5: oklch(61.23% 0.209 6.39);
+
+  --border-radius-lg: 0.5rem;
+  --border-radius-md: calc(var(--border-radius-lg) - 0.5px);
+  --border-radius-sm: calc(var(--border-radius-md) - 0.5px);
+  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, .145);
+
+  --animate-accordion-down: accordion-down 200ms ease-in-out;
+  --animate-accordion-up: accordion-up 200ms ease-in-out;
+}
+
+header {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    }
+
+
+
+    h1 {
+        font-family: Ubuntu;
+        font-size: 24px;
+        font-style: var(--color-foreground);
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+    }
+
+    h3 {
+        font-family: Ubuntu;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 15.4px;
+    }
+
+    p {
+        font-family: Ubuntu;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    blockquote {
+        font-family: Ubuntu;
+        font-size: 21px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    pre {
+        font-family: Ubuntu;
+        font-size: 13px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 18.5667px;
+    }
+
+.border {
+  border-color: oklch(35.6% 0.174 312.18 / 25%);
+}
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    transition: background-color 0.5s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+    }
+
+    @media screen and (max-width: 768px) {
+        :root {
+          --velocidad-marquee: 5s;
+        }
+      }
+
+    @property --tw-outline-style {
+        syntax: "<custom-ident>";
+        inherits: false;
+        initial-value: solid;
+      }
+
+      @layer utilities {
+        .text-balance {
+          text-wrap: balance;
+        }
+        .outline {
+          outline-style: var(--tw-outline-style);
+          outline-width: 1px;
+        }
+      }
+
+
+@keyframes accordion-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 460px;
+    }
+    to {
+      background: hsl(var(--primary) / 80%);
+      right: 160px;
+    }
+  }
+
+@keyframes accordion-up {
+  0% {
+    height: var(--radix-accordion-content-height);
+  }
+  100% {
+    height: 0;
+  }
+}

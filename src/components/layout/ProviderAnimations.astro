@@ -1,0 +1,36 @@
+<script is:inline>
+	if (!('animations' in localStorage)) {
+		localStorage.setItem('animations', 'true')
+	} else {
+		localStorage.setItem('animations', 'false')
+	}
+</script>
+
+<script>
+	function animate() {
+		const animateElements = document.querySelectorAll('.animate')
+
+		animateElements.forEach((element, index) => {
+			setTimeout(() => {
+				element.classList.add('show')
+			}, index * 150)
+		})
+	}
+
+	document.addEventListener('DOMContentLoaded', animate)
+	document.addEventListener('astro:after-swap', animate)
+</script>
+
+<script is:inline src="/js/theme.js"></script>
+<script is:inline src="/js/scroll.js"></script>
+<script is:inline src="/js/animate.js"></script>
+<script>
+  import type { TransitionBeforeSwapEvent } from "astro:transitions/client"
+  document.addEventListener("astro:before-swap", (e) =>
+    [
+      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
+        "link[as=\"font\"]"
+      ),
+    ].forEach((link) => link.remove())
+  )
+</script>

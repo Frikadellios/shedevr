@@ -1,0 +1,55 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import List from '@/components/list.astro'
+---
+
+<Layout title="Homepage" description="Homedescription">
+     <div class="p-heading-icon">
+        <div class="p-heading-icon__header">
+          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/425efe3a-lxd.svg" alt="">
+          <h3 class="p-heading-icon__title">LXD — system containers</h3>
+        </div>
+        <p>LXD, the Linux container hypervisor, merges the speed and density of containers with the manageability and security of traditional virtual machines. Economics are directly tied to density, and no other virtualisation technology is as fast or dense as LXD.</p>
+      </div>
+      <section class="p-section--hero">
+        <div class="row--50-50-on-large">
+          <div class="col">
+            <div class="p-section--shallow">
+              <h1>
+                H1 - ideally one line, up to two
+              </h1>
+              <h2>
+                H2 placeholder - aim for one line, 2 is acceptable, more - use a paragraph
+              </h2>
+            </div>
+            <div class="p-section--shallow">
+              <p>
+                Generally, the height of the right hand side of a 50/50 split should contain more content than the left
+                hand side.
+              </p>
+            </div>
+            <div class="p-cta-block">
+              <a href="#" class="p-button--positive">Learn more</a>
+              <a href="#">Contact us ›</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-image-container--3-2 is-cover">
+              <img class="p-image-container__image" src="https://assets.ubuntu.com/v1/cf1e2ddb-datacenter-wide-crop.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+    <h1>Hi there</h1>
+    <div class="p-strip is-shallow l-full-width">
+        <div class="l-start">start</div>
+        <div class="l-main">main
+          <div class="row grid-demo">
+            <div class="col-6 col-medium-2">col</div>
+            <div class="col-3  col-medium-2">col</div>
+            <div class="col-3  col-medium-2">col</div>
+          </div>
+        </div>
+        <div class="l-end">end</div>
+      </div>
+      <List />
+</Layout>
